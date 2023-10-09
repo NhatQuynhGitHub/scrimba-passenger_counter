@@ -1,111 +1,129 @@
-/* General */
-:root {
-    --text-color: rgb(55, 57, 55);
-    --text-color-2rd: rgb(222, 223, 219);
-}
-
-* {
+*, *::after, *::before {
     box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    font-size: 16px;
 }
 
 body {
-    background-image: url(./resource/background.avif);
-    background-size: cover;
-    background-repeat: no-repeat;
-    font-family: 'Heebo', sans-serif;
-    font-size: 1rem;
-    /* font-family: 'Press Start 2P', cursive; */
+    margin: 0;
+    padding: 0;
+
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
 }
 
+.bg {
+ background-image: url(resource/background.avif);
+ background-size: cover;
+ background-repeat: no-repeat;
 
-/* Reusable & Typography*/
+ padding-top: 3em;
+}
+
 .container {
-    width: 100%;
-    margin: 4em auto;
+    width: 75%;
+    max-width: 1100px;
+    margin: 0 auto;
 }
-button {
-    margin: .6em;
-    padding: .9em 2em;
-    font-size: 1.2rem;
-    border-radius: 15px;
-    border: none;
-    font-weight: 900;
-    text-transform: uppercase;
-    cursor: pointer;
-    transition: background-color 0.3s, transform 0.2s;
-} 
 
-/* Directly styling */
-.main {
+.column {
     display: flex;
     flex-direction: column;
-    align-items: center;
     text-align: center;
-    background-color: rgba(92, 92, 82, 0.9);
-    border-radius: 40px;
-    border: 8px solid rgba(113, 113, 106, 0.9) ;
-    width: 80%;
-    max-width: 1000px;
-    margin: 2em auto;
-    padding: 3em;
-    
+    align-items: center;
 }
 
-h1 {
-    font-size: 3.5rem;
-    font-weight: bold;
-    color: var(--text-color-2rd);
+.main {
+    background-color: rgba(112, 108, 80, 0.8);
+    padding: 1em;
+    color: #d5c79c;
+
+    font-weight: 400;
+    letter-spacing: 1px;
 }
 
-#count-el{
-    color: var(--text-color-2rd);
-    font-size: 4.5rem;
-    margin: 20px;
+h2 {
+    margin: 0 auto 1.2em;
 
-}
-
-/* Button */
-#increment-btn {
-    background-color: #2345a2;
-    color: #fff;
-}
-#save-btn {
-    background-color: #f0d06f;
-    color: #fff;
-}
-#increment-btn:hover {
-    box-shadow: 2px 3px 2px 1px #40444e;
-}
-#save-btn:hover {
-    box-shadow: 2px 3px 2px 1px #534931;
-}
-#increment-btn:active,
-#save-btn:active {
-    transform: scale(1.05);
-    opacity: 0.8;
-
-}
-
-
-.pre-entry {
     font-size: 2rem;
-    color: var(--text-color-2rd);
-    padding: 30px 0 10px;
+    font-weight: 900;
+}
+.main p {
+    margin: 0;
+    padding-bottom: 0.5em;
 }
 #save-el {
-    font-size: 2.5rem;
-    font-weight: bold;
-    color: var(--text-color-2rd);
+    font-size: 1.2rem;
+    font-weight: 900;
+}
+
+button {
+    padding: .7em 1.2em;
+    margin-bottom: .8em;
+    background-color: #9e9980;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+
+    font-size: 1.1rem;
+    color:#f1f0ec;
+    text-transform: uppercase;
+    font-weight: 900;
+
+    transition: all 0.2s ease;
+}
+button:active {
+    transform: scale(0.96);
+}
+#increment-btn {
+    background-color: #072d8d;
+}
+#save-btn {
+    padding: 0.7em 2.8em;
 }
 
 .footer {
-    color: var(--text-color);
-    text-align: center;
-    font-size: 1rem;
-    letter-spacing: 2px;
-    padding-bottom: 1.3rem;
+    background-color:  rgba(44, 42, 33, 0.8);
+    padding: .2em;
+    margin-top: 1.5em;
 }
+.footer-text {
+    text-align: center;
+
+    font-size: .8rem;
+    font-weight: 400;
+    color: #636158;
+}
+
+@media (min-width: 700px) {
+    .row {
+        display: flex;
+        flex-direction: row;
+    }
+
+    h1 {
+        font-size: 3.4rem;
+    }
+    h2 {
+        font-size: 3rem;
+    }
+    .main p, #save-el {
+        font-size: 1.5em;
+    }
+
+    .main {
+        padding: 1.5rem;
+    }
+
+    button {
+        margin:  0 .7em  1.5em 0;
+
+        font-size: 1.5rem;
+    }
+
+    .footer-text {
+        font-size: 1rem;
+    }
+}
+
+
+
 
